@@ -1,0 +1,27 @@
+.text{
+    text-align: center;
+    width: fit-content;
+}
+
+.register-main{
+    /* padding-top: 10vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    /* border: 2px ;
+    border-radius: 2px; */
+    border-color: black;
+}
+
+.textbox{
+    width: 30vw;
+    height: 6vh;
+}
+
+.info-text{ 
+    color: #131415;
+    font-size: 20px;
+    text-align: center;
+}

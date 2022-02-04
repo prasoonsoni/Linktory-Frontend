@@ -1,0 +1,30 @@
+
+.background{
+    background-image: url('https://d1nnwinjc04txl.cloudfront.net/static/hero-img-604bd0af051f8bd7263e711afc2e0c91.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.info-text{ 
+    color: #131415;
+    font-size: 20px;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    padding-top: 10vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.register{
+    font-size: 1.2rem;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 20px;
+}
