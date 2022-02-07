@@ -1,0 +1,19 @@
+.form-element{
+    margin-top: 20px;
+}
+
+.r-margin{
+    margin-right: 20px;
+}
+
+.logout{
+    vertical-align: middle;
+}
+.logout-container{
+    display: flex;
+    align-items: center;
+}
+
+.logout-button{
+    height: max-content;
+}

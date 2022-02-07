@@ -82,10 +82,11 @@ export default function Login() {
     };
     useEffect(() => {
       if(sessionStorage.getItem('token')){
-          navigate('/home')
+        setTimeout(() => {
+            navigate("/home");
+          }, 500);
       }
-    
-    }, []);
+    });
     
 
     return (
@@ -113,6 +114,7 @@ export default function Login() {
             <div className="mx-auto main">
                 <div className="w-100">
                     <img src={logo} alt="" height="50vh" className="image my-3" onClick={() => { navigate('/') }} />
+
                 </div>
                 <h3 className="text" style={{ color: "#131415", marginTop: "5vh" }}>
                     Sign in to your Linktory account

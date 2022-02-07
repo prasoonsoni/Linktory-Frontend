@@ -1,0 +1,11 @@
+.links-title{
+    width: "max-content";
+    margin-top: 40px;
+}
+i{
+    cursor: pointer;
+}
+
+.onHover:hover{
+    color: #0D6EFD;
+}

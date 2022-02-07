@@ -74,9 +74,8 @@ export default function Register() {
       setSnackbarStatus({
         open: true,
         severity: "success",
-        message: "Account created successfully, You can login now.",
+        message: "Account created successfully",
       });
-      sessionStorage.setItem("token", json.authtoken);
       setTimeout(() => {
         navigate("/login");
       }, 1000);
@@ -92,9 +91,11 @@ export default function Register() {
 
   useEffect(() => {
     if (sessionStorage.getItem("token")) {
-      navigate("/home");
+      setTimeout(() => {
+        navigate("/home");
+      }, 500);
     }
-  }, []);
+  });
 
   return (
     <div>

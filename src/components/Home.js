@@ -1,19 +1,22 @@
 import React,{useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
+import AddLink from './AddLink';
+import SideProfile from './SideProfile';
+import './styles/Home.css'
+import YourLinks from './YourLinks';
 
 export default function Home() {
     const navigate = useNavigate();
-    useEffect(() => {
-        if(localStorage.getItem('token')){
-            //
-        } else {
-            navigate('/login')
-        }
-    });
     
   return (
-      <>
-      <center><h1 style={{"color":"#ffffff"}}>Home</h1></center>
-      </>
+      <div className="divide">
+          <div className="userprofile">
+              <SideProfile/>
+          </div>
+          <div className="addlink">
+            <AddLink/>
+            <YourLinks/>
+          </div>
+      </div>
   );
 }

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quintessential&family=Raleway&display=swap");
+
+.main-container {
+  height: 100vh;
+}
+
+.user-logo-img {
+  text-align: center;
+  width: 25vw;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.user-img-container {
+  text-align: center;
+  align-items: center;
+}
+
+.user-button {
+  width: 500px;
+  text-align: center;
+  align-items: center;
+}
+.align-btn {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.align-btn-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.footer {
+  bottom: 0;
+  position: fixed;
+  border-top: 2px solid black;
+  width: 100%;
+  height: 5vh;
+  padding: 5px;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.copyright {
+  text-align: center;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}

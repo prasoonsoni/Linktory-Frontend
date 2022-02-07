@@ -1,0 +1,29 @@
+.divide {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  background-color: #fff;
+}
+
+.addlink {
+  width: 75%;
+  height: auto;
+  padding: 30px;
+  margin-left: 25%;
+}
+
+.userprofile {
+  width: 25%;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #F5F2E7; 
+  overflow-x: hidden; 
+  padding-top: 20px;
+  /* display: block; */
+
+}
