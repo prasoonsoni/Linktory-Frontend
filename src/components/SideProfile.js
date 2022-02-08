@@ -21,7 +21,10 @@ export default function SideProfile() {
             if (json.success) {
                 setLinks(json.links);
                 setUsername(json.username);
-            } 
+            } else {
+                setUsername("Not Found");
+                setLinks([])
+            }
         }
         getLinks();
     },[links]);
