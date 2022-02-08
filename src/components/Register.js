@@ -44,8 +44,8 @@ export default function Register() {
     e.preventDefault();
     let { name, username, email, password } = credentials;
     name = name.trim();
-    username = username.trim();
-    email = email.trim();
+    username = username.trim().toLowerCase();
+    email = email.trim().toLowerCase();
     password = password.trim();
     if (
       email.length === 0 ||

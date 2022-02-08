@@ -37,7 +37,7 @@ export default function Login() {
     const handleClick = async (e) => {
         e.preventDefault();
         let { email, password } = credentials;
-        email = email.trim();
+        email = email.trim().toLowerCase();
         password = password.trim();
         if (
             email.length === 0 ||
