@@ -96,15 +96,15 @@ export default function Link(props) {
                     {snackbarStatus.message}
                 </Alert>
             </Snackbar>
-            <div class="card my-3">
-                <div class="card-body">
-                    <i onClick={onEditClick} class="fa-regular fa-pen-to-square mx-1 onHover"></i>
-                    <i onClick={onDeleteClick} class="fa-regular fa-trash-can mx-1 onHover" ></i>
-                    <input onChange={handleOnChange} name="name" disabled={disabled} value={details.name} class="form-control my-2" id="name" type="text" placeholder="Name here..." />
-                    <input onChange={handleOnChange} name="link" disabled={disabled} value={details.link} class="form-control my-2" id="link" type="text" placeholder="Link here..." />
+            <div className="card my-3">
+                <div className="card-body">
+                    <i onClick={onEditClick} className="fa-regular fa-pen-to-square mx-1 onHover"></i>
+                    <i onClick={onDeleteClick} className="fa-regular fa-trash-can mx-1 onHover" ></i>
+                    <input onChange={handleOnChange} name="name" disabled={disabled} value={details.name} className="form-control my-2" id="name" type="text" placeholder="Name here..." />
+                    <input onChange={handleOnChange} name="link" disabled={disabled} value={details.link} className="form-control my-2" id="link" type="text" placeholder="Link here..." />
                     <div className="row">
-                        <button onClick={updateLink} style={disabled ? { display: 'none' } : { display: 'block' }} type="button" class="btn btn-success col-sm-2 mx-3"><i class="fa-solid fa-check"></i> Update</button>
-                        <button onClick={onCancelClick} style={disabled ? { display: 'none' } : { display: 'block' }} type="button" class="btn btn-danger col-sm-2"><i class="fa-regular fa-circle-xmark"></i> Cancel</button>
+                        <button onClick={updateLink} style={disabled ? { display: 'none' } : { display: 'block' }} type="button" className="btn btn-success col-sm-2 mx-3"><i className="fa-solid fa-check"></i> Update</button>
+                        <button onClick={onCancelClick} style={disabled ? { display: 'none' } : { display: 'block' }} type="button" className="btn btn-danger col-sm-2"><i className="fa-regular fa-circle-xmark"></i> Cancel</button>
                     </div>
                 </div>
             </div>

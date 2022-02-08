@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import logo from './images/logo.png'
 import './styles/UserInfo.css'
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Backdrop, CircularProgress } from '@mui/material';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function UserInfo() {
@@ -10,40 +9,33 @@ export default function UserInfo() {
     const navigate = useNavigate();
     const linksInitial = [];
     const [links, setLinks] = useState(linksInitial);
-    const [loading, setLoading] = useState(false);
     const [header, setHeader] = useState(username);
 
-    const getUserData = async () => {
-        
-    }
-
-    useEffect(async() => {
-        const response = await fetch(`${BASE_URL}/api/links/user/${username}`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
-        const json = await response.json();
-        if (json.success) {
-            setLinks(json.links);
-        } else {
-            setLinks([]);
-            setHeader(json.message)
+    useEffect(() => {
+        const getUserData = async () => {
+            const response = await fetch(`${BASE_URL}/api/links/user/${username}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            const json = await response.json();
+            if (json.success) {
+                setLinks(json.links);
+            } else {
+                setLinks([{...links}]);
+                setHeader(json.message)
+            }
         }
-        console.log(json);
+        getUserData()
     }, [links]);
 
     const handleOnClick = () => {
         navigate('/home');
     }
+
     return (
         <>
-            <Backdrop
-                sx={{ color: "#131415", zIndex: (theme) => theme.zIndex.drawer + 1 }}
-                open={loading}>
-                <CircularProgress color="inherit" />
-            </Backdrop>
             <div className="col main-container">
                 <div className="user-img-container">
                     <img src={logo} alt="linktory" className="user-logo-img" onClick={handleOnClick} />
@@ -54,7 +46,7 @@ export default function UserInfo() {
                 <div className="col align-btn-container">
                     <div className="row align-btn">
                         {links && links.map((link) => {
-                            return (<a type="button" key={link._id} href={link.link} target="_blank" class="btn btn-outline-primary link-btn user-button my-1">{link.name}</a>)
+                            return (<a type="button" key={link._id} href={link.link} target="_blank" className="btn btn-outline-primary link-btn user-button my-1">{link.name}</a>)
                         })}
                     </div>
                 </div>

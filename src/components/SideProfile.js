@@ -8,22 +8,24 @@ export default function SideProfile() {
     const [links, setLinks] = useState(linksInitial);
     const [username, setUsername] = useState("");
 
-    useEffect(async () => {
-        const response = await fetch(`${BASE_URL}/api/links/getlinks`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "auth-token": sessionStorage.getItem("token"),
-            },
-        });
-        const json = await response.json();
-        if (json.success) {
-            setLinks(json.links);
-            setUsername(json.username);
-        } else {
-            setLinks([]);
+    useEffect( () => {
+        const getLinks = async()=>{
+            const response = await fetch(`${BASE_URL}/api/links/getlinks`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "auth-token": sessionStorage.getItem("token"),
+                },
+            });
+            const json = await response.json();
+            if (json.success) {
+                setLinks(json.links);
+                setUsername(json.username);
+            } 
         }
+        getLinks();
     },[links]);
+    
     return (
         <>
             <div className="col">
@@ -34,7 +36,7 @@ export default function SideProfile() {
                     {<a className="profile-url" target="_blank" href={`http://localhost:3000/${username}`}>http://localhost:3000/{username}</a>}
                 </div>
                 {links && links.map((link) => {
-                    return (<a type="button" href={link.link} target="_blank" class="btn btn-outline-primary link-btn my-1">{link.name}</a>)
+                    return (<a type="button" key={link._id} href={link.link} target="_blank" className="btn btn-outline-primary link-btn my-1">{link.name}</a>)
                 })}
             </div>
         </>

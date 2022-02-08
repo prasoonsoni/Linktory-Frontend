@@ -81,17 +81,17 @@ export default function AddLink() {
             <div className="logout-container">
                 <h1 style={{ width: "100%" }}>Add Your Link</h1>
                 <div className="logout">
-                    <i class="logout-button fa-solid fa-arrow-right-from-bracket fa-2x onHover" onClick={logout}></i>
+                    <i className="logout-button fa-solid fa-arrow-right-from-bracket fa-2x onHover" onClick={logout}></i>
                 </div>
             </div>
             <form className='form-element' style={{ display: "flex" }}>
-                <div class="form-group r-margin">
-                    <input type="text" value={details.name} class="form-control" id="name" name='name' placeholder='Enter name here...' onChange={handleOnChange} />
+                <div className="form-group r-margin">
+                    <input type="text" value={details.name} className="form-control" id="name" name='name' placeholder='Enter name here...' onChange={handleOnChange} />
                 </div>
-                <div class="form-group r-margin">
-                    <input type="text" value={details.link} class="form-control" id="link" name='link' placeholder='Enter link here...' onChange={handleOnChange} />
+                <div className="form-group r-margin">
+                    <input type="text" value={details.link} className="form-control" id="link" name='link' placeholder='Enter link here...' onChange={handleOnChange} />
                 </div>
-                <button type="submit" class="btn btn-success" onClick={onClick}><i class="fa-solid fa-plus"></i> Add</button>
+                <button type="submit" className="btn btn-success" onClick={onClick}><i className="fa-solid fa-plus"></i> Add</button>
             </form>
         </>
     );
