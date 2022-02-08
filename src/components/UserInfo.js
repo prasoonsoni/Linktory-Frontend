@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from './images/logo.png'
 import './styles/UserInfo.css'
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function UserInfo() {
@@ -28,7 +28,7 @@ export default function UserInfo() {
             }
         }
         getUserData()
-    }, [links]);
+    }, [links,username]);
 
     const handleOnClick = () => {
         navigate('/home');

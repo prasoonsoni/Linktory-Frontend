@@ -21,7 +21,7 @@ export default function AddLink() {
         if (reason === "clickaway") {
             return;
         }
-        setSnackbarStatus({ open: false, severity: "", message: "" });
+        setSnackbarStatus({ open: false});
     };
 
     const handleOnChange = (e) => {

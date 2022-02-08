@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ParticleBackground from "./ParticleBackground";
 import "./styles/Register.css";
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 import Snackbar from "@mui/material/Snackbar";
