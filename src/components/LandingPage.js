@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./styles/LandingPage.css"
 import logo from "./images/logo.png";
 
 export default function LandingPage() {
     const navigate = useNavigate();
     useEffect(() => {
-        if(!sessionStorage.getItem('token')){
+        if (sessionStorage.getItem('token')) {
             navigate('/home')
         } 
     });
