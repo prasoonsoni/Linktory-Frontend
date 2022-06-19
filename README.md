@@ -7,7 +7,7 @@
     <img src="https://user-images.githubusercontent.com/75159757/174492196-41ecc9eb-75c3-4013-8b1b-7e29d338d00c.png" alt="Logo" height="100" width="100">
   </a>
 
-  <h1 align="center">Linktory</h3>
+  <h1 align="center">Linktory</h1>
 
   <p align="center">
     Having problem sharing different links?? Just share one link that contains all your links.
