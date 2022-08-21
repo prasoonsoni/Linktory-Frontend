@@ -36,7 +36,7 @@ export default function SideProfile() {
                     <img src={logo} alt="linktory" className="logo-img" />
                 </div>
                 <div className="url-container">
-                    {<a className="profile-url" target="_blank" href={`https://linktory.vercel.app/${username}`}>https://linktory.vercel.app/{username}</a>}
+                    {<a className="profile-url" target="_blank" href={`https://linktory.prasoon.codes/${username}`}>https://linktory.prasoon.codes/{username}</a>}
                 </div>
                 {links && links.map((link) => {
                     return (<a type="button" key={link._id} href={link.link} target="_blank" className="btn btn-outline-primary link-btn my-1">{link.name}</a>)
