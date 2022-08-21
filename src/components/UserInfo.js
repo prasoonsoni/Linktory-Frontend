@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import logo from './images/logo.png'
 import './styles/UserInfo.css'
 import { useParams, useNavigate } from 'react-router-dom';
+import { Button } from "@mui/material";
+import LinktoryButton from "./LinktoryButton";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function UserInfo() {
@@ -46,14 +48,15 @@ export default function UserInfo() {
                 <div className="col align-btn-container">
                     <div className="row align-btn">
                         {links && links.map((link) => {
-                            return (<a type="button" key={link._id} href={link.link} target="_blank" className="btn btn-outline-primary link-btn user-button my-1">{link.name}</a>)
+                            return (<LinktoryButton key={link._id} link={link.link} name={link.name}/>)
+                            // return (<a type="button" key={link._id} href={link.link} target="_blank" className="btn btn-outline-primary link-btn user-button my-1">{link.name}</a>)
                         })}
                     </div>
                 </div>
             </div>
             <footer className="footer">
                 <div className="footer-container">
-                    <p className="copyright"><b>© 2022 Linktory</b></p>
+                    <p className="copyright"><b>Made with ❤️ by <a href="https://prason.codes/" target="_blank">Prasoon</a></b></p>
                 </div>
             </footer>
         </>
