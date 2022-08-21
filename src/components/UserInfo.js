@@ -56,7 +56,7 @@ export default function UserInfo() {
             </div>
             <footer className="footer">
                 <div className="footer-container">
-                    <p className="copyright"><b>Made with ❤️ by <a href="https://prason.codes/" target="_blank">Prasoon</a></b></p>
+                    <p className="copyright"><b>Made with ❤️ by <a href="https://prasoon.codes/" target="_blank">Prasoon</a></b></p>
                 </div>
             </footer>
         </>
